@@ -117,7 +117,7 @@
                 d.button.appendTo(this.controls);
             }
             // Ensure the button has all the class names it needs and make sure its visible.
-            d.button.addClass(this.className(d.jsClass)).show();
+            d.button.addClass(this.className(d.jsClass)).show().css('display', 'block');
         },
         /**
          * Ensure that a wrapper sections exists.
@@ -159,7 +159,7 @@
             else {
                 d.button.unbind(d.event, d.eFunc).addClass(d.jsClass + "-disabled");
             }
-            d.button.attr('disabled', Boolean(b));
+            d.button.attr('disabled', !Boolean(b));
         },
         select: function(idx) {
             if (e = this.items.get(idx)) {

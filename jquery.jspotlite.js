@@ -88,9 +88,16 @@
                   function() { self.restart(); }
                 );
             }
-
-            // Update our list of items, select the first on, and start the rotation.
+            
+            // Update our list of items.
             this.refresh();
+
+            // Allow clicking on elements to bring them into the spotlite.
+            $.each(this.items, function(i) {
+                $(self.items[i]).click(function() { self.select(i); });
+            });
+
+            // Put the first item in the spotlight, and start the rotation.
             this.select(0);
             this.start();
     };

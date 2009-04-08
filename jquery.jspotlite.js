@@ -13,7 +13,9 @@
         easing: "swing",
         start: 1,
         delay: 3,
+        hoverPause: true,
         autoRestart: true,
+        itemEvent: "click",
         buttonNextHTML:  "<div></div>",
         buttonPauseHTML: "<div></div>",
         buttonPrevHTML:  "<div></div>",
@@ -79,11 +81,13 @@
             // Make sure we've got any buttons we need. 
             $.each(this.buttonData, function(i, d) { self.ensureButton(d); });
 
-            // If they show interest in the spotlite stop rotating for a moment.
-            this.container.hover(
-              function() { self.stop(); },
-              function() { self.restart(); }
-            );
+            if (this.options.hoverPause) {
+                // If they show interest in the spotlite stop rotating for a moment.
+                this.container.hover(
+                  function() { self.stop(); },
+                  function() { self.restart(); }
+                );
+            }
 
             // Update our list of items, select the first on, and start the rotation.
             this.refresh();

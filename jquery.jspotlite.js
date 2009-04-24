@@ -165,7 +165,7 @@
         },
         button: function(d, b) {
             if (b) {
-                d.button.bind(d.event, d.eFunc).removeClass(d.jsClassc + "-disabled");
+                d.button.bind(d.event, d.eFunc).removeClass(d.jsClass + "-disabled");
             }
             else {
                 d.button.unbind(d.event, d.eFunc).addClass(d.jsClass + "-disabled");

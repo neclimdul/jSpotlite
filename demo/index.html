@@ -1,13 +1,16 @@
 <html>
 <head>
   <title>jSpotlite Demo</title>
-  <script type="text/javascript" charset="utf-8" src='../jquery.min.js'></script>
-  <script type="text/javascript" charset="utf-8" src='../jquery.jspotlite.js'></script>
-  <link type="text/css" rel="stylesheet" media="all" href="../jquery.jspotlite.css" />
+  <script type="text/javascript" charset="utf-8" src='../lib/jquery.min.js'></script>
+  <script type="text/javascript" charset="utf-8" src='../lib/jquery.jspotlite.js'></script>
+  <link type="text/css" rel="stylesheet" media="all" href="../lib/jquery.jspotlite.css" />
   <link type="text/css" rel="stylesheet" media="all" href="../tango/skin.css" />
   <script type="text/javascript" charset="utf-8">
     $(function() {
-      $('#spotlite-test').jspotlite({delay: 2});
+      $('#spotlite-test').jspotlite({
+        delay: 2,
+        itemEvent: 'mouseover'
+      });
     });
   </script>
   <style type="text/css" media="all">

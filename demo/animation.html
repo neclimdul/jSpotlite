@@ -1,0 +1,56 @@
+<html>
+<head>
+  <title>jSpotlite Demo</title>
+  <script type="text/javascript" charset="utf-8" src='../lib/jquery.min.js'></script>
+  <script type="text/javascript" charset="utf-8" src='../lib/jquery.jspotlite.js'></script>
+  <link type="text/css" rel="stylesheet" media="all" href="../lib/jquery.jspotlite.css" />
+  <link type="text/css" rel="stylesheet" media="all" href="../style/tango/skin.css" />
+  <script type="text/javascript" charset="utf-8">
+    $(function() {
+      // Provide a couple options.
+      $('#spotlite-animation').jspotlite({
+        sAnimation: 'swing',
+        sAnimationDuration: 'slow',
+        sAnimationShow: {
+          opacity: 1
+        },
+        sAnimationHide: {
+          opacity: 0
+        }
+      });
+    });
+  </script>
+  <style type="text/css" media="all">
+    .jspotlite-skin-tango {
+      margin: 15px;
+    }
+    .jspotlite-skin-tango .jspotlite-container {
+      width: 400px;
+    }
+    .jspotlite-container .jspotlite-spotlite-content {
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 0;
+    }
+  </style>
+</head>
+<body>
+<h1>jSpotlite Animation Demo</h1>
+
+<p>Demonstrations of how to use the animation options to change the spotlite transitions.</p>
+
+<h2>Basic fade</h2>
+<p>A basic fade for spotlited content.</p>
+<div class="jspotlite-skin-tango">
+  <ul id="spotlite-animation" class="jspotlite-list">
+    <li>Dennis Wilson<div class="feature">this</div></li>
+    <li>Billy Joel<div class="feature">is</div></li>
+    <li>Joe Strummer<div class="feature">updating</div></li>
+    <li>Michael Jackson<div class="feature">like</div></li>
+    <li>Carole King<div class="feature">magic</div></li>
+  </ul>
+</div>
+
+</body>
+</html>

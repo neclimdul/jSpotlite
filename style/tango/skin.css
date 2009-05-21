@@ -23,7 +23,12 @@
 	width: 65%;
 	position: absolute;
 	left: 35%;
-	top: 5px;
+  top: 0;
+}
+
+.jspotlite-skin-tango .jspotlite-spotlite-content {
+/*  background: red;*/
+  padding: 5px;
 }
 
 /**
@@ -160,4 +165,16 @@
 .jspotlite-skin-tango .jspotlite-prev-disabled-vertical:active {
   cursor: default;
   background-position: 0 -96px;
+}
+
+.jspotlite-list li,
+.jspotlite-item {
+  padding: 3px 10px;
+}
+
+.jspotlite-active {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background: #346F97;
 }

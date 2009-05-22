@@ -9,13 +9,17 @@
     $(function() {
       // Provide a couple options.
       $('#spotlite-animation').jspotlite({
-        sAnimation: 'swing',
-        sAnimationDuration: 'slow',
-        sAnimationShow: {
-          opacity: 1
-        },
-        sAnimationHide: {
-          opacity: 0
+        spotlite: {
+          animation: {
+            show: {
+              opacity: 1
+            },
+            hide: {
+              opacity: 0
+            },
+            duration: 'slow',
+            easing: 'swing'
+          }
         }
       });
     });
